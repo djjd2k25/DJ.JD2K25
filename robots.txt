@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://djjd2k25.github.io/DJ.JD2K25/sitemap.xml
