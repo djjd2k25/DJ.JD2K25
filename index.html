@@ -3,190 +3,197 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-  <title>Ballermann Hits 2026 Spotify Playlist | DJ-JD</title>
-  <meta name="description" content="Höre die Ballermann Hits 2026 Spotify Playlist von DJ-JD mit neuen Malle, Party-Schlager und Après-Ski Songs. Regelmäßig aktualisiert und direkt auf Spotify." />
+  <title>Ballermann Hits 2026 – Spotify Playlist von DJ-JD</title>
+  <meta name="description" content="Ballermann Hits 2026 von DJ-JD: aktuelle Malle Hits, Party-Schlager, Sommerparty- und Après-Ski-Songs in einer regelmäßig aktualisierten Spotify Playlist." />
   <meta name="robots" content="index,follow" />
-
-  <meta property="og:title" content="Ballermann Hits 2026 Spotify Playlist | DJ-JD" />
-  <meta property="og:description" content="Die Spotify Playlist mit neuen Ballermann-, Malle- und Party-Schlager-Hits von DJ-JD." />
+  <meta property="og:title" content="Ballermann Hits 2026 – Spotify Playlist von DJ-JD" />
+  <meta property="og:description" content="Aktuelle Ballermann Hits 2026, Malle Songs, Party-Schlager und Après-Ski Tracks in einer Spotify Playlist von DJ-JD." />
   <meta property="og:type" content="website" />
-
+  <meta property="og:url" content="https://djjd2k25.github.io/DJ.JD2K25/" />
   <style>
-    :root {
-      --bg: #fff7ef;
-      --card: #ffffff;
-      --text: #1f1f1f;
-      --muted: #666666;
-      --accent: #1db954;
-      --accent-hover: #169c46;
-      --border: #eadfce;
-      --shadow: 0 10px 30px rgba(0,0,0,0.08);
+    :root{
+      --bg:#0d0f14;
+      --bg2:#141924;
+      --card:rgba(255,255,255,.05);
+      --card2:rgba(255,255,255,.035);
+      --text:#f5f7fb;
+      --muted:#b8c0cf;
+      --line:rgba(255,255,255,.1);
+      --accent:#1db954;
+      --accent2:#128342;
+      --max:1080px;
+      --radius:22px;
+      --shadow:0 24px 60px rgba(0,0,0,.3);
     }
-
-    * {
-      box-sizing: border-box;
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{
+      margin:0;
+      color:var(--text);
+      font-family:Arial,Helvetica,sans-serif;
+      background:
+        radial-gradient(circle at 85% 0%, rgba(29,185,84,.18), transparent 26%),
+        radial-gradient(circle at 0% 100%, rgba(35,70,130,.18), transparent 28%),
+        linear-gradient(180deg,var(--bg) 0%,var(--bg2) 100%);
+      line-height:1.65;
     }
-
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background: linear-gradient(180deg, #fff7ef 0%, #fffdf9 100%);
-      color: var(--text);
-      line-height: 1.6;
+    a{color:inherit}
+    .wrap{max-width:var(--max);margin:0 auto;padding:22px}
+    .hero{
+      padding:34px 0 18px;
+      display:grid;
+      grid-template-columns:1.15fr .85fr;
+      gap:24px;
+      align-items:stretch;
     }
-
-    .wrap {
-      min-height: 100vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      padding: 24px;
+    .panel{
+      background:linear-gradient(180deg,var(--card),var(--card2));
+      border:1px solid var(--line);
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      backdrop-filter:blur(10px);
     }
-
-    .card {
-      width: 100%;
-      max-width: 760px;
-      background: var(--card);
-      border: 1px solid var(--border);
-      border-radius: 20px;
-      box-shadow: var(--shadow);
-      padding: 40px 28px;
-      text-align: center;
+    .hero-copy,.hero-side,.section{padding:28px}
+    .eyebrow{
+      display:inline-flex;align-items:center;gap:8px;
+      background:rgba(29,185,84,.14);
+      border:1px solid rgba(29,185,84,.22);
+      color:#d8ffe6;
+      padding:8px 12px;border-radius:999px;
+      font-size:13px;font-weight:700;letter-spacing:.05em;text-transform:uppercase;
+      margin-bottom:16px;
     }
-
-    .badge {
-      display: inline-block;
-      margin-bottom: 16px;
-      padding: 8px 14px;
-      border-radius: 999px;
-      background: #fff1dc;
-      color: #9a5a00;
-      font-size: 14px;
-      font-weight: bold;
-    }
-
-    h1 {
-      margin: 0 0 16px;
-      font-size: 40px;
-      line-height: 1.15;
-    }
-
-    p {
-      margin: 0 auto 18px;
-      max-width: 620px;
-      font-size: 18px;
-      color: var(--muted);
-    }
-
-    .cta {
-      display: inline-block;
-      margin-top: 10px;
-      padding: 16px 24px;
-      background: var(--accent);
-      color: white;
-      text-decoration: none;
-      border-radius: 12px;
-      font-size: 18px;
-      font-weight: bold;
-      transition: background 0.2s ease;
-    }
-
-    .cta:hover {
-      background: var(--accent-hover);
-    }
-
-    .info {
-      margin-top: 28px;
-      font-size: 15px;
-      color: var(--muted);
-    }
-
-    .seo-text {
-      margin-top: 32px;
-      padding-top: 24px;
-      border-top: 1px solid var(--border);
-      text-align: left;
-    }
-
-    .seo-text h2 {
-      margin: 0 0 12px;
-      font-size: 24px;
-    }
-
-    .seo-text p {
-      margin: 0 0 14px;
-      max-width: none;
-      font-size: 17px;
-      color: var(--text);
-    }
-
-    footer {
-      margin-top: 30px;
-      font-size: 14px;
-      color: var(--muted);
-    }
-
-    @media (max-width: 640px) {
-      .card {
-        padding: 28px 20px;
-      }
-
-      h1 {
-        font-size: 30px;
-      }
-
-      p {
-        font-size: 16px;
-      }
-
-      .seo-text h2 {
-        font-size: 22px;
-      }
-
-      .seo-text p {
-        font-size: 16px;
-      }
+    h1{font-size:clamp(38px,5vw,62px);line-height:1.03;margin:0 0 14px}
+    .lead{font-size:clamp(18px,2vw,22px);color:var(--muted);max-width:58ch;margin:0 0 20px}
+    .cta{display:inline-block;background:var(--accent);color:#fff;text-decoration:none;font-weight:700;padding:15px 22px;border-radius:14px;transition:.18s ease}
+    .cta:hover{background:var(--accent2);transform:translateY(-1px)}
+    .chips{display:flex;flex-wrap:wrap;gap:10px;margin-top:18px}
+    .chip{font-size:14px;padding:8px 12px;border-radius:999px;border:1px solid var(--line);background:rgba(255,255,255,.04);color:#d8deea}
+    .hero-side h2,.section h2{font-size:clamp(25px,2.7vw,34px);line-height:1.1;margin:0 0 12px}
+    .stat-list{display:grid;gap:14px;margin-top:18px}
+    .stat{padding:14px 16px;border-radius:16px;background:rgba(255,255,255,.035);border:1px solid var(--line)}
+    .stat strong{display:block;font-size:15px;margin-bottom:4px}
+    main{display:grid;gap:22px;padding:8px 0 34px}
+    .embed-wrap iframe{width:100%;min-height:352px;border:0;border-radius:16px;background:#121212}
+    .cols{display:grid;grid-template-columns:1fr 1fr;gap:22px}
+    .muted{color:var(--muted)}
+    ul{margin:0;padding-left:20px;color:var(--muted)}
+    li{margin-bottom:10px}
+    .note{font-size:14px;color:#98a4ba}
+    footer{padding:14px 0 50px;color:#93a0b7;font-size:14px}
+    @media (max-width:900px){
+      .hero,.cols{grid-template-columns:1fr}
+      .hero-copy,.hero-side,.section{padding:22px}
+      .wrap{padding:16px}
+      .cta{display:block;text-align:center}
     }
   </style>
 </head>
 <body>
-  <main class="wrap">
-    <section class="card">
-      <div class="badge">DJ-JD Playlist</div>
+  <div class="wrap">
+    <header class="hero">
+      <section class="panel hero-copy">
+        <div class="eyebrow">DJ-JD • Spotify Playlist</div>
+        <h1>Ballermann Hits 2026</h1>
+        <p class="lead">
+          Meine Spotify Playlist für aktuelle Malle Hits, Party-Schlager, Sommerparty-Songs und Après-Ski-Vibes.
+          Hier findest du regelmäßig aktualisierte Tracks für Bierkönig, Megapark, Vorglühen, Auto, Club und jede Mallorca-Party.
+        </p>
+        <a class="cta" href="https://open.spotify.com/playlist/059TVpFx9Zgz0AIId5V27m" target="_blank" rel="noopener noreferrer">Playlist direkt auf Spotify öffnen</a>
+        <div class="chips" aria-label="Themen der Playlist">
+          <span class="chip">Ballermann Hits 2026</span>
+          <span class="chip">Malle Hits 2026</span>
+          <span class="chip">Spotify Playlist</span>
+          <span class="chip">Party-Schlager</span>
+          <span class="chip">Après-Ski</span>
+        </div>
+      </section>
 
-      <h1>Ballermann Hits 2026 Spotify Playlist von DJ-JD</h1>
+      <aside class="panel hero-side">
+        <h2>Was dich hier erwartet</h2>
+        <p class="muted">
+          Diese Seite ergänzt die Playlist mit echtem Kontext, damit Besucher sofort verstehen,
+          welche Musikrichtung, Stimmung und Einsatzbereiche hier drinstecken.
+        </p>
+        <div class="stat-list">
+          <div class="stat">
+            <strong>Für wen?</strong>
+            Für Fans von Ballermann, Partyschlager, Malle, Sommerparty und Après-Ski.
+          </div>
+          <div class="stat">
+            <strong>Wo passt sie?</strong>
+            Bierkönig, Megapark, Gartenparty, Auto, Vortrinken, Club und Hüttengaudi.
+          </div>
+          <div class="stat">
+            <strong>Wie oft neu?</strong>
+            Die Playlist wird regelmäßig mit passenden Tracks und frischen Party-Sounds ergänzt.
+          </div>
+        </div>
+      </aside>
+    </header>
 
-      <p>
-        Höre die besten Ballermann Hits 2026 mit neuen Malle, Party-Schlager
-        und Après-Ski Songs in einer regelmäßig aktualisierten Spotify Playlist.
-      </p>
+    <main>
+      <section class="panel section embed-wrap">
+        <h2>Spotify Playlist direkt hier starten</h2>
+        <p class="muted">
+          Du kannst die Playlist direkt auf der Seite anhören oder mit einem Klick in Spotify öffnen.
+          Der Embed sorgt für eine bessere Nutzererfahrung, während der Text die Seite thematisch klarer macht.
+        </p>
+        <iframe
+          src="https://open.spotify.com/embed/playlist/059TVpFx9Zgz0AIId5V27m?utm_source=generator&theme=0"
+          loading="lazy"
+          allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+          allowfullscreen
+          title="Spotify Embed: Ballermann Hits 2026 von DJ-JD">
+        </iframe>
+      </section>
 
-      <a class="cta" href="https://open.spotify.com/playlist/059TVpFx9Zgz0AIId5V27m" target="_blank" rel="noopener noreferrer">
-        Jetzt auf Spotify hören
-      </a>
+      <div class="cols">
+        <section class="panel section">
+          <h2>Passende Künstler</h2>
+          <p>
+            Künstlernamen machen Sinn, wenn sie natürlich eingebaut sind und stilistisch wirklich zu deiner Playlist passen.
+            Besser als eine bloße Namensliste ist ein echter Satz mit Kontext.
+          </p>
+          <p class="muted">
+            Beispiel: In dieser Playlist findest du Ballermann- und Party-Schlager-Sounds im Stil bekannter Mallorca-
+            und Party-Künstler wie Lorenz Büffel, Peter Wackel, Tim Toupet, Julian Sommer und weiteren Acts.
+          </p>
+        </section>
 
-      <div class="info">
-        Neue Partyhits, Malle-Songs und Stimmungslieder für Urlaub, Feiern und Après-Ski.
+        <section class="panel section">
+          <h2>Neu in der Playlist</h2>
+          <ul>
+            <li>Neue Malle Hits 2026</li>
+            <li>Aktuelle Party-Schlager</li>
+            <li>Sommerparty- und Après-Ski-Tracks</li>
+            <li>Regelmäßige Updates für 2026</li>
+          </ul>
+          <p class="note" style="margin-top:14px;">
+            Diesen Block kannst du später leicht anpassen, wenn neue Songs oder Trends dazukommen.
+          </p>
+        </section>
       </div>
 
-      <div class="seo-text">
-        <h2>Ballermann Playlist 2026</h2>
+      <section class="panel section">
+        <h2>SEO-Text für Google</h2>
         <p>
-          Diese Playlist sammelt aktuelle Ballermann Hits, Partyschlager und
-          stimmungsvolle Malle-Songs für 2026. Sie ist ideal für Feiern,
-          Sommerpartys, Urlaubsstimmung und Après-Ski.
+          Ballermann Hits 2026 ist meine Spotify Playlist mit aktuellen Malle Hits, Party-Schlager-Songs,
+          Après-Ski-Sounds und Sommerparty-Tracks für 2026. Wenn du eine Spotify Playlist für Mallorca,
+          Bierkönig, Megapark, Sommerparty oder die nächste Schlager-Feier suchst, findest du hier regelmäßig
+          aktualisierte Songs und echte Ballermann-Stimmung.
         </p>
         <p>
-          Wenn du neue Ballermann Musik auf Spotify suchst, findest du hier eine
-          laufend gepflegte Auswahl mit Partytracks und Stimmungshits von DJ-JD.
+          Die Playlist richtet sich an Fans von Malle Hits, Party-Musik, deutschem Schlager und modernen
+          Ballermann-Sounds. Ich ergänze regelmäßig neue Tracks und halte die Auswahl passend für Sommer,
+          Club, Vorglühen, Auto und Après-Ski.
         </p>
-      </div>
+      </section>
+    </main>
 
-      <footer>
-        © DJ-JD
-      </footer>
-    </section>
-  </main>
+    <footer>
+      DJ-JD • GitHub Pages • Ballermann Hits 2026
+    </footer>
+  </div>
 </body>
 </html>
