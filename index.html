@@ -65,8 +65,51 @@
     }
     h1{font-size:clamp(38px,5vw,62px);line-height:1.03;margin:0 0 14px}
     .lead{font-size:clamp(18px,2vw,22px);color:var(--muted);max-width:58ch;margin:0 0 20px}
-    .cta{display:inline-block;background:var(--accent);color:#fff;text-decoration:none;font-weight:700;padding:15px 22px;border-radius:14px;transition:.18s ease}
-    .cta:hover{background:var(--accent2);transform:translateY(-1px)}
+
+    .cta-row{
+      display:grid;
+      grid-template-columns:repeat(2, minmax(0, 1fr));
+      gap:12px;
+      margin-top:6px;
+    }
+
+    .cta{
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      min-height:54px;
+      padding:15px 20px;
+      border-radius:14px;
+      text-decoration:none;
+      font-weight:700;
+      text-align:center;
+      transition:.18s ease;
+      border:1px solid transparent;
+    }
+
+    .cta-primary{
+      background:var(--accent);
+      color:#fff;
+      box-shadow:0 10px 28px rgba(29,185,84,.22);
+    }
+
+    .cta-primary:hover{
+      background:var(--accent2);
+      transform:translateY(-1px);
+    }
+
+    .cta-secondary{
+      background:rgba(255,255,255,.055);
+      border-color:var(--line);
+      color:var(--text);
+    }
+
+    .cta-secondary:hover{
+      background:rgba(255,255,255,.1);
+      border-color:rgba(255,255,255,.2);
+      transform:translateY(-1px);
+    }
+
     .chips{display:flex;flex-wrap:wrap;gap:10px;margin-top:18px}
     .chip{font-size:14px;padding:8px 12px;border-radius:999px;border:1px solid var(--line);background:rgba(255,255,255,.04);color:#d8deea}
     .hero-side h2,.section h2{font-size:clamp(25px,2.7vw,34px);line-height:1.1;margin:0 0 12px}
@@ -81,11 +124,13 @@
     li{margin-bottom:10px}
     .note{font-size:14px;color:#98a4ba}
     footer{padding:14px 0 50px;color:#93a0b7;font-size:14px}
+
     @media (max-width:900px){
       .hero,.cols{grid-template-columns:1fr}
       .hero-copy,.hero-side,.section{padding:22px}
       .wrap{padding:16px}
-      .cta{display:block;text-align:center}
+      .cta-row{grid-template-columns:1fr}
+      .cta{width:100%}
     }
   </style>
 </head>
@@ -98,8 +143,18 @@
         <p class="lead">
           Meine Spotify Playlist für aktuelle Malle Hits, Party-Schlager, Sommerparty-Songs und Après-Ski-Vibes.
           Hier findest du regelmäßig aktualisierte Tracks für Bierkönig, Megapark, Vorglühen, Auto, Club und jede Mallorca-Party.
+          Weiter unten findest du zusätzlich noch meine separate Playlist mit frischen Ballermann-Neuheiten.
         </p>
-        <a class="cta" href="https://open.spotify.com/playlist/059TVpFx9Zgz0AIId5V27m" target="_blank" rel="noopener noreferrer">Playlist direkt auf Spotify öffnen</a>
+
+        <div class="cta-row">
+          <a class="cta cta-primary" href="https://open.spotify.com/playlist/059TVpFx9Zgz0AIId5V27m" target="_blank" rel="noopener noreferrer">
+            Hauptplaylist auf Spotify öffnen
+          </a>
+          <a class="cta cta-secondary" href="https://open.spotify.com/playlist/25L3nOL4bpKSTm3G9trPN1?si=-zEEkRrPR12_PqCFCvCzDQ" target="_blank" rel="noopener noreferrer">
+            Ballermann Neuheiten öffnen
+          </a>
+        </div>
+
         <div class="chips" aria-label="Themen der Playlist">
           <span class="chip">Ballermann Hits 2026</span>
           <span class="chip">Malle Hits 2026</span>
@@ -111,10 +166,10 @@
 
       <aside class="panel hero-side">
         <h2>Was dich hier erwartet</h2>
-  <p class="muted">
-  Hier findest du aktuelle Malle Hits, Party-Schlager, Sommerparty-Songs und Après-Ski-Vibes
-  für Bierkönig, Megapark, Auto, Club und jede Mallorca-Party.
-</p>
+        <p class="muted">
+          Hier findest du aktuelle Malle Hits, Party-Schlager, Sommerparty-Songs und Après-Ski-Vibes
+          für Bierkönig, Megapark, Auto, Club und jede Mallorca-Party.
+        </p>
         <div class="stat-list">
           <div class="stat">
             <strong>Für wen?</strong>
@@ -135,16 +190,31 @@
     <main>
       <section class="panel section embed-wrap">
         <h2>Spotify Playlist direkt hier starten</h2>
-      <p class="muted">
-  Starte die Playlist direkt hier auf der Seite oder öffne sie mit einem Klick in Spotify.
-  Perfekt für Sommerparty, Vorglühen, Mallorca-Abend und Partyschlager-Stimmung.
-</p>
+        <p class="muted">
+          Starte die Playlist direkt hier auf der Seite oder öffne sie mit einem Klick in Spotify.
+          Perfekt für Sommerparty, Vorglühen, Mallorca-Abend und Partyschlager-Stimmung.
+        </p>
         <iframe
           src="https://open.spotify.com/embed/playlist/059TVpFx9Zgz0AIId5V27m?utm_source=generator&theme=0"
           loading="lazy"
           allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
           allowfullscreen
           title="Spotify Embed: Ballermann Hits 2026 von DJ-JD">
+        </iframe>
+      </section>
+
+      <section class="panel section embed-wrap">
+        <h2>Ballermann Neuheiten</h2>
+        <p class="muted">
+          Frische Neuheiten aus Ballermann, Party-Schlager und verwandten Sounds.
+          Mit Fokus auf aktuelle Releases, Qualität und Songs, die direkt Stimmung machen.
+        </p>
+        <iframe
+          src="https://open.spotify.com/embed/playlist/25L3nOL4bpKSTm3G9trPN1?utm_source=generator&theme=0"
+          loading="lazy"
+          allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+          allowfullscreen
+          title="Spotify Embed: Ballermann Neuheiten von DJ-JD">
         </iframe>
       </section>
 
@@ -170,63 +240,50 @@
             <li>Sommerparty- und Après-Ski-Tracks</li>
             <li>Regelmäßige Updates für 2026</li>
           </ul>
- <p class="note" style="margin-top:14px;">
-  Hier findest du regelmäßig neue Malle Hits, aktuelle Party-Schlager und frische Songs
-  für Sommer, Après-Ski und Mallorca-Feeling.
-</p>
+          <p class="note" style="margin-top:14px;">
+            Hier findest du regelmäßig neue Malle Hits, aktuelle Party-Schlager und frische Songs
+            für Sommer, Après-Ski und Mallorca-Feeling.
+          </p>
         </section>
-<section class="panel section">
-  <h2>Was dich in der Playlist erwartet</h2>
-  <p>
-    Ballermann Hits 2026 ist meine Spotify Playlist mit aktuellen Malle Hits, Party-Schlager-Songs,
-    Après-Ski-Sounds und Sommerparty-Tracks für 2026. Wenn du eine Spotify Playlist für Mallorca,
-    Bierkönig, Megapark, Sommerparty oder die nächste Schlager-Feier suchst, findest du hier regelmäßig
-    aktualisierte Songs und echte Ballermann-Stimmung.
-  </p>
-  <p>
-    Die Playlist richtet sich an Fans von Malle Hits, Party-Musik, deutschem Schlager und modernen
-    Ballermann-Sounds. Ich ergänze regelmäßig neue Tracks und halte die Auswahl passend für Karneval,
-    Club, Vorglühen, Vatertag, Oktoberfest und Après-Ski.
-  </p>
-</section>
 
-<section class="panel section">
-  <h2>DJ-JD auf Spotify folgen</h2>
-  <p>
-    Folge meinem Spotify-Künstlerprofil, damit du neue Songs, aktuelle Releases
-    und weitere Party-Schlager von DJ-JD nicht verpasst.
-  </p>
-  <p class="muted">
-    Dort findest du mein Künstlerprofil, neue Musik und weitere Updates rund um
-    meine Ballermann- und Malle-Sounds.
-  </p>
-  <p style="margin-top:18px;">
-    <a class="cta" href="https://open.spotify.com/artist/44jVsfGIjGqjI1pjuynkoE" target="_blank" rel="noopener noreferrer">
-      DJ-JD auf Spotify folgen
-    </a>
-  </p>
-</section>
+        <section class="panel section">
+          <h2>Was dich in der Playlist erwartet</h2>
+          <p>
+            Ballermann Hits 2026 ist meine Spotify Playlist mit aktuellen Malle Hits, Party-Schlager-Songs,
+            Après-Ski-Sounds und Sommerparty-Tracks für 2026. Wenn du eine Spotify Playlist für Mallorca,
+            Bierkönig, Megapark, Sommerparty oder die nächste Schlager-Feier suchst, findest du hier regelmäßig
+            aktualisierte Songs und echte Ballermann-Stimmung.
+          </p>
+          <p>
+            Die Playlist richtet sich an Fans von Malle Hits, Party-Musik, deutschem Schlager und modernen
+            Ballermann-Sounds. Ich ergänze regelmäßig neue Tracks und halte die Auswahl passend für Karneval,
+            Club, Vorglühen, Vatertag, Oktoberfest und Après-Ski.
+          </p>
+        </section>
+
+        <section class="panel section">
+          <h2>DJ-JD auf Spotify folgen</h2>
+          <p>
+            Folge meinem Spotify-Künstlerprofil, damit du neue Songs, aktuelle Releases
+            und weitere Party-Schlager von DJ-JD nicht verpasst.
+          </p>
+          <p class="muted">
+            Dort findest du mein Künstlerprofil, neue Musik und weitere Updates rund um
+            meine Ballermann- und Malle-Sounds.
+          </p>
+          <p style="margin-top:18px;">
+            <a class="cta cta-primary" href="https://open.spotify.com/artist/44jVsfGIjGqjI1pjuynkoE" target="_blank" rel="noopener noreferrer">
+              DJ-JD auf Spotify folgen
+            </a>
+          </p>
+        </section>
       </div>
-
-      <section class="panel section">
-        <h2>Was dich in der Playlist erwartet</h2>
-        <p>
-          Ballermann Hits 2026 ist meine Spotify Playlist mit aktuellen Malle Hits, Party-Schlager-Songs,
-          Après-Ski-Sounds und Sommerparty-Tracks für 2026. Wenn du eine Spotify Playlist für Mallorca,
-          Bierkönig, Megapark, Karneval oder die nächste Schlager-Feier suchst, findest du hier regelmäßig
-          aktualisierte Songs und echte Ballermann-Stimmung.
-        </p>
-        <p>
-          Die Playlist richtet sich an Fans von Malle Hits, Party-Musik, deutschem Schlager und modernen
-          Ballermann-Sounds. Ich ergänze regelmäßig neue Tracks und halte die Auswahl passend für Sommer,
-          Club, Vorglühen, Abriss, Karneval und Après-Ski.
-        </p>
-      </section>
     </main>
-  <footer>
-  DJ-JD • GitHub Pages • Ballermann Hits 2026<br>
-  <a href="https://linktr.ee/DJ.jd2k25" target="_blank" rel="noopener noreferrer">Weitere Links von DJ.JD2k25</a>
-</footer>
+
+    <footer>
+      DJ-JD • GitHub Pages • Ballermann Hits 2026<br>
+      <a href="https://linktr.ee/DJ.jd2k25" target="_blank" rel="noopener noreferrer">Weitere Links von DJ.JD2k25</a>
+    </footer>
   </div>
 </body>
 </html>
